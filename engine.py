@@ -16,6 +16,26 @@ consoleHandler.setFormatter(logFormatter)
 logging.getLogger().addHandler(consoleHandler)
 LOG.setLevel(logging.DEBUG)
 
+# Basic Data Types
+class EventType(Enum):
+    BAR = "BAR"
+
+
+@dataclass(frozen=True)
+class Event:
+    type: EventType
+    payload: Any  # this could be a enum as well
+
+# 3. I need a Bar, so I wrote a Bar dataclasses? 
+# Why dataclass?
+@dataclass(frozen=True)
+class Bar:
+    open: float
+    high: float
+    low: float
+    close: float
+    volume: float
+    timestamp: datetime
 
 
 # 1.  I create engine...
@@ -34,16 +54,6 @@ class Engine:
         
         while True:
             sleep(0.05)
-
-
-class EventType(Enum):
-    BAR = "BAR"
-
-
-@dataclass(frozen=True)
-class Event:
-    type: EventType
-    payload: Any  # this could be a enum as well
 
 
 class EventBus:
@@ -79,19 +89,6 @@ class EventBus:
 
     def stop(self):
         self.thread.join()
-
-
-
-# 3. I need a Bar, so I wrote a Bar dataclasses? 
-# Why dataclass?
-@dataclass(frozen=True)
-class Bar:
-    open: float
-    high: float
-    low: float
-    close: float
-    volume: float
-    timestamp: datetime
 
 
 class DataFeed(ABC):
