@@ -2,6 +2,8 @@
 
 In ONE file...
 
+![Architecture](./assets/fig1.png)
+
 ## V1
 
 100 行代码 + 1 张图，理解系统化交易事件驱动框架。
