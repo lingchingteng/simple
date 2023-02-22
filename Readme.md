@@ -2,6 +2,12 @@
 
 In ONE file...
 
+This is mainly a educational implementation. The goal is to explain the core 
+concepts of event-driven trading system as clear as possible.
+
+But with few more refactor and implementation of the interface, this is a working
+framework to do backtesting and live trading.
+
 ![Architecture](./assets/fig1.png)
 
 ## V1
