@@ -10,7 +10,7 @@ framework to do backtesting and live trading.
 
 ![Architecture](./assets/fig1.png)
 
-## V1
+## V1 Bare Minimal
 
 100 行代码 + 1 张图，理解系统化交易事件驱动框架。
 
@@ -31,3 +31,7 @@ framework to do backtesting and live trading.
 - Other
 
 [>> 视频讲解 v1](https://www.youtube.com/watch?v=wm7QLlzgo2M&t=1s)
+
+## V2 Add Execution
+
+Check git tag v2 to see the code. 

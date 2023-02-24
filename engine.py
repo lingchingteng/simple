@@ -55,23 +55,6 @@ class OrderType(Enum):
     STOP = "STOP"
 
 
-@dataclass(frozen=True, slots=True)
-class Event:
-    type: EventType
-    payload: Any  # this could be a enum as well
-
-
-# 3. I need a Bar, so I wrote a Bar dataclasses? 
-# Why dataclass?
-@dataclass(frozen=True, slots=True)
-class Bar:
-    open: float
-    high: float
-    low: float
-    close: float
-    volume: float
-    timestamp: datetime
-
 @dataclass
 class Asset:
     type: AssetType
