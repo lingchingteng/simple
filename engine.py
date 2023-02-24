@@ -38,12 +38,6 @@ class Bar:
     volume: float
     timestamp: datetime
 
-# Core Data Types
-class EventType(Enum):
-    BAR = "BAR"
-    ORDER_CREATE = "ORDER_CREATE"
-    TRADE = "TRADE"
-
 
 class AssetType(Enum):
     CASH = "CASH"
