@@ -35,3 +35,10 @@ framework to do backtesting and live trading.
 ## V2 Add Execution
 
 Check git tag v2 to see the code. 
+
+## V3 Make project a proper Python project structure
+
+- Add poetry package management
+- Create module properly
+- Separate data model and component
+- Separate example code with source code

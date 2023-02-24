@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "simple"
+version = "0.0.1"
+description = ""
+authors = ["FunCoder <wangzhetju@gmail.com>"]
+readme = "Readme.md"
+packages = [{include = "simple"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.5.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

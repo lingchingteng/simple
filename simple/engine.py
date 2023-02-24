@@ -2,12 +2,12 @@ from __future__ import annotations  # the FUTURE of annotation...hah
 from collections import defaultdict
 from typing import Any, Dict, List, Callable
 from abc import ABC, abstractmethod
-from enum import Enum
 from datetime import datetime
-from dataclasses import dataclass
 from time import sleep
 import logging
 from threading import Thread
+
+from simple.model import Event, EventType, Bar, Order, Trade, OrderType, Asset, AssetType
 
 
 LOG = logging.getLogger(__name__)
@@ -17,60 +17,7 @@ consoleHandler.setFormatter(logFormatter)
 logging.getLogger().addHandler(consoleHandler)
 LOG.setLevel(logging.DEBUG)
 
-# Basic Data Types
-class EventType(Enum):
-    BAR = "BAR"
 
-
-@dataclass(frozen=True)
-class Event:
-    type: EventType
-    payload: Any  # this could be a enum as well
-
-# 3. I need a Bar, so I wrote a Bar dataclasses? 
-# Why dataclass?
-@dataclass(frozen=True)
-class Bar:
-    open: float
-    high: float
-    low: float
-    close: float
-    volume: float
-    timestamp: datetime
-
-
-class AssetType(Enum):
-    CASH = "CASH"
-
-
-class OrderType(Enum):
-    MARKET = "MARKET"
-    LIMIT = "MARKET"
-    STOP = "STOP"
-
-
-@dataclass
-class Asset:
-    type: AssetType
-    name: str
-
-
-@dataclass(frozen=True, slots=True)
-class Order:
-    asset: Asset
-    type: OrderType
-    price: float  # TODO use decimal
-    amount: float
-
-
-@dataclass(frozen=True, slots=True)
-class Trade:
-    order_id: int
-    amount: float
-    price: float
-
-
-# 1.  I create engine...
 class Engine:
 
     def __init__(self, bus: EventBus, strategy: Strategy, feed: DataFeed, execution: Execution):
@@ -81,8 +28,8 @@ class Engine:
 
     def run(self):
         # subs
-        bus.subscribe(EventType.BAR, self.strategy.on_bar)
-        bus.subscribe(EventType.ORDER_CREATE, self.execution.on_order_create)
+        self.bus.subscribe(EventType.BAR, self.strategy.on_bar)
+        self.bus.subscribe(EventType.ORDER_CREATE, self.execution.on_order_create)
         self.bus.start()
         self.feed.start()
         
@@ -231,16 +178,3 @@ class Strategy:
             payload=order
         )
         self.bus.push(event)
-        
-
-        
-if __name__ == "__main__":
-    
-    LOG.debug("Tesing EventBus")
-    bus = EventBus(sample_freq=0.05)
-    strat = Strategy(bus)
-    execution = DummyExecution(bus)
-    feed = DummyBarFeed(bus)
-    engine = Engine(bus, strategy=strat, feed=feed, execution=execution)
-
-    engine.run()
