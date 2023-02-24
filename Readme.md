@@ -36,6 +36,10 @@ framework to do backtesting and live trading.
 
 Check git tag v2 to see the code. 
 
+![](./assets/v2-execution.png)
+
+[>> 视频讲解 v2](https://www.youtube.com/watch?v=Iy50u3qFYdc)
+
 ## V3 Make project a proper Python project structure
 
 - Add poetry package management
