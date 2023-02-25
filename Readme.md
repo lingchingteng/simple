@@ -46,3 +46,18 @@ Check git tag v2 to see the code.
 - Create module properly
 - Separate data model and component
 - Separate example code with source code
+
+## Buy me a coffee?
+
+<div id="image-table">
+    <table>
+	    <tr>
+            <td style="padding:10px">
+<img src="https://raw.githubusercontent.com/wangzhe3224/landing/main/content/en/zhifubao.jpg"  width="30%" height="15%">
+            </td>
+            <td style="padding:10px">
+<img src="https://raw.githubusercontent.com/wangzhe3224/landing/main/content/en/weixin.jpg"  width="50%" height="30%">
+            </td>
+        </tr>
+    </table>
+</div>
