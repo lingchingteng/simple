@@ -47,6 +47,10 @@ Check git tag v2 to see the code.
 - Separate data model and component
 - Separate example code with source code
 
+[Diff v2 vs v3](https://github.com/wangzhe3224/simple/compare/v2...v3)
+
+[>> 视频讲解 v3 <<](https://www.youtube.com/watch?v=5v25dblc2E0)
+
 ## Buy me a coffee?
 
 <div id="image-table">
