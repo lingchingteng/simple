@@ -1,14 +1,44 @@
 # 事件驱动系统化交易框架
 
-In ONE file...
-
-This is mainly a educational implementation. The goal is to explain the core 
+This is mainly an educational implementation. The goal is to explain the core 
 concepts of event-driven trading system as clear as possible.
 
 But with few more refactor and implementation of the interface, this is a working
 framework to do backtesting and live trading.
 
+这是一个教育版本的事件驱动系统化交易框架。从一个最小化的框架（100+行代码）开始，逐步构建完整的
+框架。每一次更新，我会采用一个 git tag 做标记，比如 `v1`,`v2` 这种，这样本一个版本都可以
+查阅跟前一个版本的区别和联系。
+
+可以通过 `https://github.com/wangzhe3224/simple/compare/{替换成某个tag2}...{tag号1}`
+查看不同版本之间的区别。
+
+每一个版本，我会尽量配一个视频讲解：
+
+- [Youtube](https://www.youtube.com/watch?v=wm7QLlzgo2M&list=PL5ETbHWvsj-FJUbOyDHHqu6IyK6Sd17Ba&index=13)
+- [B站](https://space.bilibili.com/414096658/channel/collectiondetail?sid=91587)
+
 ![Architecture](./assets/fig1.png)
+
+- [事件驱动系统化交易框架](#事件驱动系统化交易框架)
+  - [路线图](#路线图)
+  - [V1 Bare Minimal](#v1-bare-minimal)
+  - [V2 Add Execution](#v2-add-execution)
+  - [V3 Make project a proper Python project structure](#v3-make-project-a-proper-python-project-structure)
+  - [Buy me a coffee?](#buy-me-a-coffee)
+
+## 路线图
+
+- [x] v1 100行代码最小化框架
+- [x] v2 200行代码增加执行模块接口
+- [x] v3 改进项目的组织架构
+- [ ] 数据
+    - [ ] 加密货币分时历史数据
+    - [ ] 分式数据模块
+- [ ] 回测
+    - [ ] 策略接口和示范
+    - [ ] 回测模拟执行模块
+    - [ ] 加密货币分时历史数据回测和分析
 
 ## V1 Bare Minimal
 
@@ -33,6 +63,8 @@ framework to do backtesting and live trading.
 [>> 视频讲解 v1](https://www.youtube.com/watch?v=wm7QLlzgo2M&t=1s)
 
 ## V2 Add Execution
+
+200 + 行代码，加入执行模块。
 
 Check git tag v2 to see the code. 
 
