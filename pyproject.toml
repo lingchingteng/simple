@@ -9,6 +9,7 @@ packages = [{include = "simple"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 pandas = "^1.5.3"
+fastparquet = "^2023.2.0"
 
 
 [build-system]

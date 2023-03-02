@@ -25,6 +25,7 @@ framework to do backtesting and live trading.
   - [V1 Bare Minimal](#v1-bare-minimal)
   - [V2 Add Execution](#v2-add-execution)
   - [V3 Make project a proper Python project structure](#v3-make-project-a-proper-python-project-structure)
+  - [V4 Data - Util](#v4-data---util)
   - [Buy me a coffee?](#buy-me-a-coffee)
 
 ## 路线图
@@ -82,6 +83,19 @@ Check git tag v2 to see the code.
 [Diff v2 vs v3](https://github.com/wangzhe3224/simple/compare/v2...v3)
 
 [>> 视频讲解 v3 <<](https://www.youtube.com/watch?v=5v25dblc2E0)
+
+## V4 Data - Util
+
+这个部分为我们的回测数据做准备：
+
+- Binance 批量下载不同粒度的分时数据
+- 处理分时数据
+- 基本的数据检查
+
+**参考链接**：
+
+- [Binance History Data](https://data.binance.vision/?prefix=data/spot/monthly/klines/BTCUSDT/1m/)
+- [Binance API Doc](https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data)
 
 ## Buy me a coffee?
 
