@@ -97,6 +97,10 @@ Check git tag v2 to see the code.
 - [Binance History Data](https://data.binance.vision/?prefix=data/spot/monthly/klines/BTCUSDT/1m/)
 - [Binance API Doc](https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data)
 
+[Diff v4](https://github.com/wangzhe3224/simple/compare/v3...v4)
+
+[>> <<]()
+
 ## Buy me a coffee?
 
 <div id="image-table">
