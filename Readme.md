@@ -99,7 +99,7 @@ Check git tag v2 to see the code.
 
 [Diff v4](https://github.com/wangzhe3224/simple/compare/v3...v4)
 
-[>> <<]()
+[>> 视频讲解 v4 <<](https://www.youtube.com/watch?v=hfaIaRvQpe4)
 
 ## Buy me a coffee?
 
